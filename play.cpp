@@ -170,8 +170,9 @@ void Board::randomizzaMela()
 	int row, column;
 	do
 	{
-		row = rand() % ROW;
-		column = rand() % COLUMN;
+		row = rand() % (ROW-1);
+		column = rand() % (COLUMN-1);
+        row++; column++;
 	}while (board[row][column] == '+' || 
 			board[row][column] == '#' ||
 			board[row][column] == '@');

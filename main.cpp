@@ -4,7 +4,10 @@ int main()
 {
 	initscr();
 	raw();
-	timeout(150);
+	//timeout(150);
+    //DEBUG
+    timeout(15000);
+    //DEBUG
 	noecho();
 	srand(time(NULL));
 	Board b(4);

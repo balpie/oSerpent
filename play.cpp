@@ -185,7 +185,7 @@ void Board::gameover()
 	getyx(stdscr, y, x);
 	mvprintw(y/2, x/2 + 10, "game over :(");
 	mvprintw(y/2 + 1, x/2 + 10, "pija varkosa");
-	mvaddch(y/2 + 2, x/2 + 10, points + '0');
+	mvprintw(y/2 + 2, x/2 + 10, "%d", points);
 
 	//TODO stampa i gazzoz di punti dioboia
     
@@ -194,7 +194,3 @@ void Board::gameover()
 	refresh();
 	getch();
 }
-
-
-
-

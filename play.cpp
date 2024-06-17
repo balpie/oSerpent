@@ -37,7 +37,7 @@ Board::Board(int nMele = 1){
 			R = rand() % ROW;
 			C = rand() % (COLUMN - 2);
 		}
-		while (board[R][C] == '+' || (R == 9 && C == 10));
+		while (board[R][C] == '+' || (R == ROW/2 && C == (COLUMN - 2)/2) || (R == 1 + ROW/2 && C == (COLUMN - 2)/2));
 		board[R][C] = '+';
 	}
 	//disegno la testa del serpente
